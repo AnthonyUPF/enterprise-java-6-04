@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Colorblind Mode Lab</h1>
+  <div class="tree-boxes">
+    <div class="tree-box" [style.background-color]="getBackgroundColor(0)" [style.border]="getBorderColor()"
+         (mouseover)="onBoxMouseOver(box1, getTextColor(0), getBackgroundColor(0))"
+         (mouseout)="onBoxMouseOut(box1, getTextColor(0), getBackgroundColor(0))"
+         #box1>
+      <h3 [style.color]="getTextColor(0)">Box 1</h3>
+      <p [style.color]="getTextColor(0)">Hello</p>
+      <p [style.color]="getTextColor(0)">Can you</p>
+      <p [style.color]="getTextColor(0)">See me?</p>
+    </div>
+    <div class="tree-box" [style.background-color]="getBackgroundColor(1)" [style.border]="getBorderColor()"
+         (mouseover)="onBoxMouseOver(box2, getTextColor(1), getBackgroundColor(1))"
+         (mouseout)="onBoxMouseOut(box2, getTextColor(1), getBackgroundColor(1))"
+         #box2>
+      <h3 [style.color]="getTextColor(1)">Box 2</h3>
+      <p [style.color]="getTextColor(1)">Hello</p>
+      <p [style.color]="getTextColor(1)">Can you</p>
+      <p [style.color]="getTextColor(1)">See me?</p>
+    </div>
+    <div class="tree-box" [style.background-color]="getBackgroundColor(2)" [style.border]="getBorderColor()"
+         (mouseover)="onBoxMouseOver(box3, getTextColor(2), getBackgroundColor(2))"
+         (mouseout)="onBoxMouseOut(box3, getTextColor(2), getBackgroundColor(2))"
+         #box3>
+      <h3 [style.color]="getTextColor(2)">Box 3</h3>
+      <p [style.color]="getTextColor(2)">Hello</p>
+      <p [style.color]="getTextColor(2)">Can you</p>
+      <p [style.color]="getTextColor(2)">See me?</p>
+    </div>
+  </div>
+  <button class="button" (click)="toggleColorblindMode()">
+    {{ blindMode ? 'Colorblind Mode On' : 'Colorblind Mode Off' }}
+  </button>
+</div>
